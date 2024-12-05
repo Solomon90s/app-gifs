@@ -1,0 +1,5 @@
+.miCard:hover{
+  transform: scale(105%);
+  border: solid 1px whitesmoke;
+  box-shadow: 3px 3px 3px rgb(255, 255, 255);
+}

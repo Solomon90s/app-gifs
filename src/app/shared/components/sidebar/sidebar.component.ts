@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { GifsService } from 'src/app/gifs/services/gifs.service';
 
 @Component({
@@ -14,8 +14,11 @@ export class SidebarComponent {
   ? Creamos un getter de tags
   ? y desde el servicio llamamos al .tagsHistory
   */
-  get tags() {
+  get tags(): string[] {
     return this.gifsService.tagsHistory
   }
 
+  searchTag( tag: string) {
+    this.gifsService.searchTag( tag );
+  }
 }
